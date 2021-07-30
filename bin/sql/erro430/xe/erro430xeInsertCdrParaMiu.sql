@@ -1,0 +1,19 @@
+INSERT
+INTO BSS_tratamento_cdrs_miu
+  (
+   processo,
+   created,
+   msg_id,
+   msg_id2,
+   msg_id_serv,
+   external_id
+  )
+  VALUES
+  (
+   'Erro430',
+   trunc(sysdate),
+   ?,
+   ?,
+   ?,
+   ?
+  )

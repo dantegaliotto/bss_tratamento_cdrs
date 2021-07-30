@@ -1,0 +1,1 @@
+select CURRENT_STATE from vw$arp2$serviceinstancebpo where vtoid = ?

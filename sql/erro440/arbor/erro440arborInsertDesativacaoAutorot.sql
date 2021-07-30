@@ -1,0 +1,24 @@
+INSERT INTO gvt_disc_component 
+(SERV_INST, PACKAGE_ID, COMPONENT_INSTANCE_ID , END_DATE, RUN_STATUS, EXT_ID_TYPE_INST)
+values (?,?,?,?,'99',?)
+
+
+/*
+INSERT INTO gvt_disc_component 
+(SERV_INST, PACKAGE_ID, COMPONENT_INSTANCE_ID , END_DATE, RUN_STATUS, EXT_ID_TYPE_INST)
+SELECT TRIM(EIEM.EXTERNAL_ID),
+      CPC.PACKAGE_ID, 
+      CPC.COMPONENT_INST_ID, 
+      ?,                       -- data do fim do plano 
+      '99'
+      ,'6'
+FROM 
+    CUSTOMER_ID_EQUIP_MAP EIEM,
+    CMF_PACKAGE_COMPONENT CPC
+WHERE EIEM.SUBSCR_NO = CPC.PARENT_SUBSCR_NO
+AND   EIEM.EXTERNAL_ID_TYPE = 6
+AND   EIEM.INACTIVE_DATE IS NULL
+AND   CPC.COMPONENT_ID IN (?)  -- component_id do plano
+AND   EIEM.external_id  = ?    -- external_id
+AND   CPC.INACTIVE_DT IS NULL
+*/
